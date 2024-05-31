@@ -19,6 +19,7 @@ RUN set -ex; \
 	apk add --no-cache \
 		openssh-client \
 		libusb-compat \
+		libusb \
 	; \
 	# build dependencies
 	apk add --no-cache --virtual .build-deps \
