@@ -11,6 +11,8 @@ then
 fi
 
 cat >/etc/nut/ups.conf <<EOF
+maxretry 5
+
 [$UPS_NAME]
 	desc = "$UPS_DESC"
 	driver = $UPS_DRIVER
