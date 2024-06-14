@@ -7,6 +7,8 @@ on:
     tags:
       - 'v*'
   pull_request:
+  schedule:
+    - cron: "15 4 * * *"
   
 
 jobs:
@@ -36,8 +38,9 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            ghcr.io/${{ github.actor }}/nut-upsd
+            ghcr.io/${{ github.repository_owner }}/nut-upsd
           tags: |
+            type=schedule,pattern=nightly
             type=ref,event=branch
             type=ref,event=pr
             type=semver,pattern={{version}}
@@ -48,7 +51,6 @@ jobs:
         with:
           context: .
           platforms: linux/amd64,linux/arm64
-          push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           cache-to: type=gha,mode=max
