@@ -42,7 +42,6 @@ jobs:
           tags: |
             type=schedule,pattern=nightly
             type=ref,event=branch
-            type=ref,event=pr
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}
 
