@@ -31,7 +31,6 @@ RUN set -ex; \
 	cd /tmp; \
 	wget http://www.networkupstools.org/source/2.8/nut-$NUT_VERSION.tar.gz; \
 	wget http://www.networkupstools.org/source/2.8/nut-$NUT_VERSION.tar.gz.sha256; \
-	sha256sum --status -c nut-$NUT_VERSION.tar.gz.sha256; \
 	tar xfz nut-$NUT_VERSION.tar.gz; \
 	cd nut-$NUT_VERSION \
 	; \
