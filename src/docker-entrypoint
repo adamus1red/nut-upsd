@@ -33,7 +33,6 @@ cat >/etc/nut/upsd.users <<EOF
 
 [monitor]
 	password = $API_PASSWORD
-    port = /dev/usbups
 	upsmon master
 EOF
 
