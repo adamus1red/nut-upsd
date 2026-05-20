@@ -2,7 +2,7 @@ FROM alpine:3.23.4
 
 LABEL maintainer="docker@upshift.fr"
 
-ENV NUT_VERSION=2.8.4
+ENV NUT_VERSION=2.8.5
 
 ENV UPS_NAME="ups"
 ENV UPS_DESC="UPS"
