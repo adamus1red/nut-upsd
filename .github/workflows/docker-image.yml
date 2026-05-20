@@ -9,7 +9,10 @@ on:
   pull_request:
   schedule:
     - cron: "15 4 * * *"
-  
+
+permissions:
+  contents: read
+  packages: write
 
 jobs:
   build:
