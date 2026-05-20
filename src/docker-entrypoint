@@ -42,7 +42,8 @@ SHUTDOWNCMD "$SHUTDOWN_CMD"
 DEADTIME 25
 EOF
 
-chgrp -R nut /etc/nut /dev/bus/usb
+chgrp -R nut /etc/nut
+# chgrp -R nut /etc/nut /dev/bus/usb
 chmod -R o-rwx /etc/nut
 
 /usr/sbin/upsdrvctl start
