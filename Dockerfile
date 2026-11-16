@@ -1,4 +1,4 @@
-FROM alpine:3.24.1
+FROM alpine:3.24.4
 
 LABEL maintainer="docker@upshift.fr"
 
